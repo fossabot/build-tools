@@ -21,7 +21,7 @@ jobs:
         run: |
           go fmt $(go list ./...)
           go vet $(go list ./...)
-          unset "${!CI@}"
+          unset "${!GITHUB_@}" RUNNER_WORKSPACE
           CGO_ENABLED=1 go test -p 1 -mod=readonly -race -coverprofile=.testCoverage.txt -covermode=atomic -coverpkg=$(go list ./... | tr '\n' , | sed 's/,$//') ./...
           go tool cover -html=.testCoverage.txt -o coverage.html
           go tool cover -func=.testCoverage.txt
