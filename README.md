@@ -1,5 +1,6 @@
-
 # build-tools
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsparetimecoders%2Fbuild-tools.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsparetimecoders%2Fbuild-tools?ref=badge_shield)
+
 *WIP*
 
 A set of highly opinionated tools for creating and building components/services into [docker](https://www.docker.com/) images and deploying them to [Kubernetes](https://kubernetes.io/) clusters.
@@ -69,3 +70,7 @@ Now that we have a docker image, let's publish it to the docker repository (this
     
 *TODO Link to more environment variables and stuff*
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsparetimecoders%2Fbuild-tools.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsparetimecoders%2Fbuild-tools?ref=badge_large)
