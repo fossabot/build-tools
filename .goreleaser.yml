@@ -4,8 +4,7 @@ env:
   - CGO_ENABLED=0
 
 builds:
-  -
-    id: build
+  - id: build
     main: ./cmd/build/build.go
     binary: build
     flags:
@@ -17,8 +16,7 @@ builds:
       - darwin
     goarch:
       - amd64
-  -
-    id: push
+  - id: push
     main: ./cmd/push/push.go
     binary: push
     flags:
@@ -30,8 +28,7 @@ builds:
       - darwin
     goarch:
       - amd64
-  -
-    id: deploy
+  - id: deploy
     main: ./cmd/deploy/deploy.go
     binary: deploy
     flags:
@@ -43,7 +40,30 @@ builds:
       - darwin
     goarch:
       - amd64
-
+  - id: service-setup
+    main: ./cmd/service-setup/service-setup.go
+    binary: service-setup
+    flags:
+      - -tags=prod
+    ldflags:
+      - -s -w
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+  - id: kubecmd
+    main: ./cmd/kubecmd/kubecmd.go
+    binary: kubecmd
+    flags:
+      - -tags=prod
+    ldflags:
+      - -s -w
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
 dockers:
   -
     goos: linux
@@ -53,6 +73,8 @@ dockers:
     - build
     - push
     - deploy
+    - kubecmd
+    - service-setup
     image_templates:
     - "sparetimecoders/{{ .ProjectName }}:latest"
     - "sparetimecoders/{{ .ProjectName }}:{{ .Tag }}"
@@ -67,16 +89,21 @@ brews:
     folder: Formula
 
 archives:
-- replacements:
+
+- id: build-tools
+  replacements:
     darwin: Darwin
     linux: Linux
     windows: Windows
     386: i386
     amd64: x86_64
+
 checksum:
   name_template: 'checksums.txt'
+
 snapshot:
   name_template: "{{ .Tag }}-next"
+
 changelog:
   sort: asc
   filters:
