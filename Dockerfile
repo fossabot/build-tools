@@ -4,8 +4,8 @@ RUN apt-get update && \
     apt-get install -y ca-certificates && \
     useradd -m -u 1001 vsts_VSTSContainer
 
-WORKDIR /usr/local/bin
+#WORKDIR /usr/local/bin
 
-COPY build deploy push ./
+COPY build push /usr/local/bin/
 
-ENV BUILD_TOOLS_PATH=/usr/local/bin
+#ENV BUILD_TOOLS_PATH=/usr/local/bin

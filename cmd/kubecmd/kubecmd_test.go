@@ -1,12 +1,26 @@
 package main
 
 import (
+	"bytes"
 	"github.com/stretchr/testify/assert"
 	"io/ioutil"
 	"os"
 	"path/filepath"
 	"testing"
 )
+
+func TestVersion(t *testing.T) {
+	out = &bytes.Buffer{}
+	version = "1.0.0"
+	commit = "67d2fcf276fcd9cf743ad4be9a9ef5828adc082f"
+	exitFunc = func(code int) {
+		assert.Equal(t, 0, code)
+	}
+	os.Args = []string{"build", "-version"}
+	main()
+
+	assert.Equal(t, "Version: 1.0.0, commit 67d2fcf276fcd9cf743ad4be9a9ef5828adc082f, built at unknown\n", out.(*bytes.Buffer).String())
+}
 
 func TestKubecmd_MissingArguments(t *testing.T) {
 	os.Args = []string{"kubecmd"}

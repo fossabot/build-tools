@@ -8,15 +8,27 @@ import (
 	"gitlab.com/sparetimecoders/build-tools/pkg/config"
 	"gitlab.com/sparetimecoders/build-tools/pkg/deploy"
 	"gitlab.com/sparetimecoders/build-tools/pkg/kubectl"
+	ver "gitlab.com/sparetimecoders/build-tools/pkg/version"
+	"io"
 	"os"
 	"time"
 )
 
-func main() {
-	exitFunc(doDeploy())
-}
+var (
+	version = "dev"
+	commit  = "none"
+	date    = "unknown"
+	exitFunc = os.Exit
+	out io.Writer = os.Stdout
+)
 
-var exitFunc = os.Exit
+func main() {
+	if ver.PrintVersionOnly(version, commit, date, out) {
+		exitFunc(0)
+	} else {
+		exitFunc(doDeploy())
+	}
+}
 
 func doDeploy() int {
 	var context, namespace string

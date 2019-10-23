@@ -6,3 +6,4 @@
 /kubecmd
 /service-setup
 .testCoverage.txt
+dist
