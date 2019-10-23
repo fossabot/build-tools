@@ -3,7 +3,7 @@ package main
 import (
 	"bytes"
 	"github.com/stretchr/testify/assert"
-	"gitlab.com/sparetimecoders/build-tools/pkg"
+	"github.com/sparetimecoders/build-tools/pkg"
 	"os"
 	"testing"
 )

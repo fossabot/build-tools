@@ -3,7 +3,7 @@ package kubecmd
 import (
 	"flag"
 	"fmt"
-	"gitlab.com/sparetimecoders/build-tools/pkg/config"
+	"github.com/sparetimecoders/build-tools/pkg/config"
 	"io"
 )
 

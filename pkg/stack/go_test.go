@@ -3,7 +3,7 @@ package stack
 import (
 	"fmt"
 	"github.com/stretchr/testify/assert"
-	"gitlab.com/sparetimecoders/build-tools/pkg/templating"
+	"github.com/sparetimecoders/build-tools/pkg/templating"
 	"io/ioutil"
 	"os"
 	"path/filepath"

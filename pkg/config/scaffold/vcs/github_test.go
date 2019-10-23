@@ -6,8 +6,8 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/google/go-github/v28/github"
 	"github.com/stretchr/testify/assert"
-	"gitlab.com/sparetimecoders/build-tools/pkg"
-	"gitlab.com/sparetimecoders/build-tools/pkg/config/scaffold/vcs/mocks"
+	"github.com/sparetimecoders/build-tools/pkg"
+	"github.com/sparetimecoders/build-tools/pkg/config/scaffold/vcs/mocks"
 	"net/http"
 	"testing"
 )

@@ -1,4 +1,4 @@
-module gitlab.com/sparetimecoders/build-tools
+module github.com/sparetimecoders/build-tools
 
 go 1.12
 

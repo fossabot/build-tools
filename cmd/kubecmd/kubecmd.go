@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"gitlab.com/sparetimecoders/build-tools/pkg/kubecmd"
-	ver "gitlab.com/sparetimecoders/build-tools/pkg/version"
+	"github.com/sparetimecoders/build-tools/pkg/kubecmd"
+	ver "github.com/sparetimecoders/build-tools/pkg/version"
 	"io"
 	"os"
 )

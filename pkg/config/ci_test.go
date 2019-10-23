@@ -3,7 +3,7 @@ package config
 import (
 	"bytes"
 	"github.com/stretchr/testify/assert"
-	"gitlab.com/sparetimecoders/build-tools/pkg"
+	"github.com/sparetimecoders/build-tools/pkg"
 	"io/ioutil"
 	"os"
 	"path/filepath"

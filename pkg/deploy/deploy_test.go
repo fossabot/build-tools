@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/stretchr/testify/assert"
-	"gitlab.com/sparetimecoders/build-tools/pkg/kubectl"
+	"github.com/sparetimecoders/build-tools/pkg/kubectl"
 	"io/ioutil"
 	"os"
 	"path/filepath"

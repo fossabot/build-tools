@@ -3,8 +3,8 @@ package config
 import (
 	"bytes"
 	"github.com/stretchr/testify/assert"
-	"gitlab.com/sparetimecoders/build-tools/pkg"
-	"gitlab.com/sparetimecoders/build-tools/pkg/registry"
+	"github.com/sparetimecoders/build-tools/pkg"
+	"github.com/sparetimecoders/build-tools/pkg/registry"
 	"io/ioutil"
 	"os"
 	"testing"

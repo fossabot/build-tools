@@ -1,8 +1,8 @@
 package main
 
 import (
-	"gitlab.com/sparetimecoders/build-tools/pkg/push"
-	ver "gitlab.com/sparetimecoders/build-tools/pkg/version"
+	"github.com/sparetimecoders/build-tools/pkg/push"
+	ver "github.com/sparetimecoders/build-tools/pkg/version"
 	"io"
 	"os"
 )

@@ -5,7 +5,7 @@ import (
 	"bytes"
 	"fmt"
 	"github.com/liamg/tml"
-	"gitlab.com/sparetimecoders/build-tools/pkg/config"
+	"github.com/sparetimecoders/build-tools/pkg/config"
 	"io"
 	"io/ioutil"
 	_ "k8s.io/client-go/plugin/pkg/client/auth/oidc"
